@@ -19,6 +19,10 @@ def get_todo(todo_id: int):
     for todo in fake_db:
         if todo.id == todo_id:
             return todo
+    #   raise: Từ khóa Python để ném ra (gây ra) một ngoại lệ.
+    #   HTTPException: Một lớp ngoại lệ (Exception) được FastAPI cung cấp để trả về các lỗi HTTP cụ thể.
+    #   status_code=404: Trả về mã lỗi HTTP 404 Not Found – nghĩa là tài nguyên không tồn tại.
+    #   detail="Todo not found": Nội dung thông báo lỗi gửi về cho client (thường ở dạng JSON).
     raise HTTPException(status_code=404, detail="Todo not found")
 
 @router.put("/todos/{todo_id}", response_model=Todo)
