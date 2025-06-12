@@ -65,3 +65,12 @@ Chạy code khi package được import => Có thể dùng để import sẵn mo
 🧠 Giúp code rõ ràng, dễ bảo trì: Định nghĩa dữ liệu kiểu tường minh, dễ mở rộng.
 
 🔁 Tái sử dụng cấu trúc dữ liệu: Viết 1 lần, dùng nhiều nơi (request, response, DB...).
+
+## Lệnh chạy dự án
+
+uvicorn app.main:app --reload
+
+## ============================================================
+
+FastAPI: modern Python web framework for building APIs
+Pydantic V2: the most widely used data Python validation library, rewritten in Rust (5x-50x faster)
