@@ -72,5 +72,5 @@ uvicorn app.main:app --reload
 
 ## ============================================================
 
-FastAPI: modern Python web framework for building APIs
-Pydantic V2: the most widely used data Python validation library, rewritten in Rust (5x-50x faster)
+- FastAPI: modern Python web framework for building APIs
+- Pydantic V2: the most widely used data Python validation library, rewritten in Rust (5x-50x faster)
