@@ -12,7 +12,7 @@ def read_all():
     return get_all_todos()
 
 @router.get("/{id}", response_model=TodoRead)
-def get_todo_by_id(id):
+def get_todo_by_id(id:int):
     result = get_todo_according_id(int(id))
     if bool(result):
         return result
