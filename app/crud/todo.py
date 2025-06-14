@@ -2,7 +2,6 @@ from app.schemas.todo import TodoCreate
 from app.models.todo import Todo
 from app.core.storage import todos
 from typing import Optional
-import json
 
 def create_todo(todo_create: TodoCreate) -> Todo:
     new_id = len(todos) + 1

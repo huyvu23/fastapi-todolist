@@ -19,7 +19,7 @@ def get_todo_by_id(id:int):
         if bool(result):
             return result
         raise HTTPException(status_code=404, detail=f"Todo with id {id} not found")
-    except ValueError as e:
+    except Exception as e:
         print("Lỗi:", e)
 
 @router.put("/{id}")
@@ -29,7 +29,7 @@ def update_status_todo_item(id:int,response_model=TodoRead):
         if bool(response):
            return response
         raise HTTPException(status_code=404, detail=f"Todo with id {id} not found")
-    except ValueError as e:
+    except Exception as e:
         print("Lỗi:", e)
 
 @router.delete("/{id}")
@@ -39,8 +39,5 @@ def delete_to_by_id(id:int):
         if response:
             return Response(status_code=status.HTTP_204_NO_CONTENT)
         raise HTTPException(status_code=404, detail=f"Todo with id {id} not found")
-    except ValueError as e:
+    except Exception as e:
         print("Lỗi:", e)
-
-
-

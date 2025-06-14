@@ -11,5 +11,5 @@ def create(user:UserCreate):
         if bool(new_user):
             return new_user
         raise HTTPException(status_code=500, detail="Sign up failed")
-    except ValueError as e:
+    except Exception as e:
         print("Lỗi:", e)
